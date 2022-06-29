@@ -1,0 +1,33 @@
+{
+  "name": "random-image",
+  "version": "1.0.0",
+  "description": "A simple random image generator built with Sanity.io & NextJS",
+  "author": "Adem UYSAL - #phiber",
+  "scripts": {
+    "dev": "concurrently \"next\" \"cd studio && sanity start\"",
+    "build": "lerna bootstrap && npm run build:sanity && npm run build:web",
+    "build:sanity": "cd studio && sanity build ../public/studio -y && cd ..",
+    "build:web": "next build",
+    "start": "next start -p $PORT",
+    "export": "next build && next export",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@sanity/client": "^3.3.2",
+    "@sanity/image-url": "^1.0.1",
+    "groq": "^2.29.3",
+    "next": "^12.2.0",
+    "next-sanity": "^0.5.2",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-copy-to-clipboard": "^5.1.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.53.0"
+  },
+  "devDependencies": {
+    "concurrently": "^7.2.2",
+    "eslint": "8.18.0",
+    "eslint-config-next": "12.2.0",
+    "lerna": "^5.1.6"
+  }
+}
