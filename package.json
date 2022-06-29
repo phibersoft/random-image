@@ -2,7 +2,7 @@
   "name": "random-image",
   "version": "1.0.0",
   "description": "A simple random image generator built with Sanity.io & NextJS",
-  "author": "Adem UYSAL - #phiber",
+  "author": "Adem UYSAL",
   "scripts": {
     "dev": "concurrently \"next\" \"cd studio && sanity start\"",
     "build": "lerna bootstrap && npm run build:sanity && npm run build:web",
